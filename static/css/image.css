@@ -1,0 +1,251 @@
+body {
+    background-color: #fafafb;
+    font-family: "Poppins", sans-serif
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box
+}
+
+a {
+    text-decoration: none
+}
+
+.layout {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 1366px;
+    height: 95vh;
+    margin: 0 auto;
+    position: relative
+}
+
+.credentials {
+    position: absolute;
+    bottom: 0;
+    font-size: 14px;
+    font-weight: 500;
+    font-family: "Montserrat", sans-serif
+}
+
+.credentials, .credentials a {
+    color: #a9a9a9
+}
+
+.creator-name {
+    font-weight: 700
+}
+
+.imageUploaderForm {
+    text-align: center;
+    background-color: #fff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, .1);
+    border-radius: 12px;
+    width: 402px;
+    height: 469px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding: 2rem 0
+}
+
+.form-title {
+    font-size: 1.2rem
+}
+
+.upload-type {
+    font-size: 10px;
+    color: #a9a9a9
+}
+
+.drop-zone {
+    width: 338px;
+    height: 220px;
+    background-color: #f6f8fb;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px dashed #97bef4;
+    border-radius: 12px
+}
+
+.drop-zone-input {
+    display: none
+}
+
+.drop-zone .placeholder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center
+}
+
+.fileUploadOption > input[type=file] {
+    display: none
+}
+
+.fileUploadOption > label {
+    background-color: #2f80ed;
+    font-size: 12px;
+    font-weight: 500;
+    color: #fff;
+    padding: 15px 30px;
+    border-radius: 8px;
+    cursor: pointer
+}
+
+.fileSubmitOption > input[type=file] {
+    display: none
+}
+
+.fileSubmitOption > label {
+    background-color: #74ffa6;
+    font-size: 12px;
+    font-weight: 500;
+    color: #fff;
+    padding: 15px 30px;
+    border-radius: 8px;
+    cursor: pointer
+}
+
+.loaderContainer {
+    width: 400px;
+    height: 145px;
+    border-radius: 12px;
+    border: none;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, .1);
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 0 32px
+}
+
+.loaderText {
+    font-size: 18px;
+    font-weight: 500
+}
+
+.loaderBar {
+    width: 100%;
+    background: #f2f2f2;
+    overflow: hidden
+}
+
+.loaderBar, .loaderBar .bar {
+    height: 6px;
+    border-radius: 8px
+}
+
+.loaderBar .bar {
+    width: 30%;
+    background: #2f80ed;
+    animation: loadinganim 1s infinite
+}
+
+@keyframes loadinganim {
+    0% {
+        transform: translateX(-10%)
+    }
+    to {
+        transform: translateX(330%)
+    }
+}
+
+.previewCardContainer {
+    width: 400px;
+    height: 455px;
+    background: #fff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, .1);
+    border-radius: 12px;
+    border: none;
+    padding: 1rem 0;
+    justify-content: space-evenly
+}
+
+.previewCardContainer, .successContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center
+}
+
+.successContainer {
+    justify-content: space-around
+}
+
+.successContainer .successLoader {
+    background-color: #219653;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+
+.successContainer .successText {
+    font-weight: 500;
+    font-size: 18px
+}
+
+.contentPreview {
+    overflow: hidden;
+    height: 224px;
+    width: 338px;
+    margin: 0 auto;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 12px;
+    background-position: 50%
+}
+
+.contentPreview img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    text-align: center
+}
+
+.previewLink {
+    display: flex;
+    width: 338px
+}
+
+.previewLink > input {
+    width: 100%;
+    height: 34px;
+    background: #f6f8fb;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    padding: .2rem .6rem;
+    outline: none
+}
+
+.previewLink > button {
+    margin-left: -1rem;
+    z-index: 1;
+    width: 80px;
+    font-size: 9px;
+    background-color: #2f80ed;
+    border: none;
+    background: #2f80ed;
+    border-radius: 8px;
+    color: #fff;
+    cursor: pointer
+}
+.hide{
+    display: none;
+}
+
+.copyfinish{
+    background-color: #9dfd60;
+    font-weight: bold;
+}
+/*# sourceMappingURL=main.405d5d52.chunk.css.map */

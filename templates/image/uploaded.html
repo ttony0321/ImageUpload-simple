@@ -1,0 +1,44 @@
+{% extends 'image/main.html' %}
+{% load static %}
+{% static "media" as baseUrl %}
+{% block content %}
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root">
+        <div class="layout">
+            <div class="previewCardContainer">
+                <div class="successContainer">
+                    <div class="successLoader">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px"
+                             fill="white">
+                            <path d="M0 0h24v24H0z" fill="none"></path>
+                            <path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"></path>
+                        </svg>
+                    </div>
+                    <p class="successText">Uploaded Successfully!</p></div>
+                <div class="contentPreview"
+                     {# 이미지 출력 #}style="background-image: url({{ baseUrl }}/media/{{ file_name }});"></div>
+                <div class="previewLink"><input ondragstart="return false" id="urlcopy" type="text" readonly="true"
+                                               {# 주소 출력 #} value="{{ baseUrl }}/media/{{ file_name }}">
+                    <button id="copybtn" onclick="CopyUrl()">Copy link</button>
+                </div>
+            </div>
+            <div class="credentials">created by <a href="https://tousif-ahmed.netlify.app/" target="_blank"
+                                                   class="creator-name" rel="noreferrer">ttony0321</a> - <a
+                    href="https://devchallenges.io/" target="_blank" class="challenger-name" rel="noreferrer">
+                devChallenges.io</a></div>
+        </div>
+    </div>
+    <script type="text/javascript">
+    $(document).ready(function (){
+        $('#copybtn').click(function (event){
+            if($('#copybtn').hasClass('copyfinish') === false){
+                $('#copybtn').addClass("copyfinish");
+                $('#copybtn').css({"background": "#9dfd60", "font-weight": "bold"})
+            }else{
+                $('#copybtn').removeClass("copyfinish");
+                $('#copybtn').css({"background": "#2f80ed", "font-weight": "normal"})
+            }
+        })
+    })
+    </script>
+{% endblock %}

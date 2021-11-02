@@ -1,0 +1,11 @@
+{% extends 'image/main.html' %}
+{% load static %}
+{% static "" as baseUrl %}
+
+{% block content %}
+    <img src="{{ baseUrl }}/media/{{ file_name }}">
+    <script>
+    console.log({{ baseUrl }})
+    </script>
+{% endblock %}
+
